@@ -1,0 +1,47 @@
+.mybutton{
+	-fx-background-color: RED;
+	-fx-text-fill: white;
+}
+
+.mytitle{
+    -fx-font-family: "HipsterishFontNormal";
+    /*-fx-font-family: "Shadows Into Light";*/
+    -fx-font-size: 36px;
+    
+}
+
+.mypane{
+	-fx-background-color: linear-gradient(#a118f0, #18bdf0); }
+
+.batmanButton {
+	-fx-background-color: transparent;
+	-fx-background-size: 160px;
+	-fx-background-image: url("view/images/batman.png");
+	-fx-background-repeat: no-repeat;
+	 -fx-background-position: center;
+	 -fx-padding:20;
+	 
+	 -fx-background-radius: 100px 100px 100px 100px;
+}
+
+.supermanButton {
+	-fx-background-color: transparent;
+	-fx-background-size: 160px;
+	-fx-background-image: url("view/images/superman.png");
+	-fx-background-repeat: no-repeat;
+	 -fx-background-position: center;
+	 -fx-padding:20;
+	 
+	 -fx-background-radius: 100px 100px 100px 100px;
+}
+
+.spidermanButton {
+	-fx-background-color: transparent;
+	-fx-background-size: 160px;
+	-fx-background-image: url("view/images/spiderman.png");
+	-fx-background-repeat: no-repeat;
+	 -fx-background-position: center;
+	 -fx-padding:20;
+	 
+	 -fx-background-radius: 100px 100px 100px 100px;
+}

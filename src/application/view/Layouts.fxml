@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="300.0" minWidth="500.0" prefHeight="506.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OneController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane prefHeight="363.0" prefWidth="745.0" styleClass="mypane" stylesheets="@../application.css" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="136.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="340.0" minHeight="10.0" prefHeight="195.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="275.0" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <Label alignment="CENTER" styleClass="mytitle" stylesheets="@../application.css" text="Super Heroes" textFill="#f2e9e9">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" style="-fx-underline: true; -fx-font-style: italic;" text="need help?" textFill="#e1c9c9" GridPane.rowIndex="1">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets top="10.0" />
+                           </opaqueInsets>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="option one" />
+                                    <MenuItem mnemonicParsing="false" text="option two" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#handleClose" text="option one" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="three" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu></Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="btSuper" mnemonicParsing="false" onMouseEntered="#chancheCursor" prefHeight="169.0" prefWidth="169.0" styleClass="supermanButton" stylesheets="@../application.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="btBatman" mnemonicParsing="false" onMouseEntered="#chancheCursor" prefHeight="169.0" prefWidth="169.0" styleClass="batmanButton" stylesheets="@../application.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="btSpider" mnemonicParsing="false" onMouseEntered="#chancheCursor" prefHeight="169.0" prefWidth="169.0" styleClass="spidermanButton" stylesheets="@../application.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="147.0" prefWidth="238.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleClose" styleClass="mybutton" stylesheets="@../application.css" text="CERRAR">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                           <tooltip>
+                              <Tooltip text="click me!" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleSend" style="-fx-background-color: GREEN; -fx-text-fill: white;" text="OPEN">
+                           <effect>
+                              <DropShadow blurType="TWO_PASS_BOX" color="#8d7b31" height="0.0" radius="7.8475" width="33.39" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip text="sure you want to live?" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
